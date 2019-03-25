@@ -1,0 +1,28 @@
+input:
+  kafka:
+    zookeepers: "127.0.0.1:2181"
+    brokers: "127.0.0.1:9092"
+    topics: "topic_name"
+    group: "group_name"
+    group_config_list:
+process:
+  worker_threads: 10
+output:
+  elasticsearch:
+    cluster_name: "es_cluster_name"
+    http_host_port_list: 
+      - "127.0.0.1:9200"
+    index_format: "your_index_name-yyyy.MM.dd"
+    index_format_args:
+    type_format: "your_type_name"
+    type_format_args:
+    id_format: "null"
+    id_format_args:
+    routing_format: "null"
+    routing_format_args:
+    bulk_index_size: 10000
+    custom:
+      time_zone: "utc"
+      time_key: "null"
+      time_fmt: "null"
+      force_utc: false
