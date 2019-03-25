@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.activitystream:sdk:0.1.2.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/activitystream/sdk/0.1.2.2-SNAPSHOT/sdk-0.1.2.2-20150915.133944-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/activitystream/sdk/0.1.2.2-SNAPSHOT/sdk-0.1.2.2-20150915.133944-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/activitystream/sdk/0.1.2.2-SNAPSHOT/sdk-0.1.2.2-20150915.133944-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

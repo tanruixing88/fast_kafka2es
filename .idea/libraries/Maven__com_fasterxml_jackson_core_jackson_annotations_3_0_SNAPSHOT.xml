@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:3.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/3.0-SNAPSHOT/jackson-annotations-3.0-20190309.052554-39.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/3.0-SNAPSHOT/jackson-annotations-3.0-20190309.052554-39-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/3.0-SNAPSHOT/jackson-annotations-3.0-20190309.052554-39-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
