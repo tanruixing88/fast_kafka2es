@@ -1,6 +1,0 @@
-Main.class
-init/ParseOption.class
-dao/YamlDao.class
-core/Worker.class
-core/Process.class
-config/Config.class
