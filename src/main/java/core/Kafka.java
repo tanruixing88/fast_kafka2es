@@ -67,5 +67,8 @@ public class Kafka {
                 procMsg.input2output(consumerRecord.value(), es);
             }
         }
+
+        kafkaConsumer.close();
+        es.close();
     }
 }
