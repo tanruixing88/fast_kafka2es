@@ -70,5 +70,6 @@ public class Kafka {
 
         kafkaConsumer.close();
         es.close();
+        Process.addWorkerClose();
     }
 }

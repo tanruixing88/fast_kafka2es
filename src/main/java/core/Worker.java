@@ -10,7 +10,7 @@ import sun.misc.SignalHandler;
  * @author tanruixing  
  * Created on 2019-03-20
  */
-public class Worker  implements SignalHandler {
+public class Worker {
     private static final Logger logger = LoggerFactory.getLogger("worker:" + Thread.currentThread().getName());
     private Kafka kafka;
     private ES es;
@@ -43,9 +43,5 @@ public class Worker  implements SignalHandler {
         beforeExec();
         exec();
         afterExec();
-    }
-
-    public void handle(Signal signal) {
-        Process.addWorkerClose();
     }
 }
