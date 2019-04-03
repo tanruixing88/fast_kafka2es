@@ -23,7 +23,7 @@ public class Process implements SignalHandler {
     private Config config;
     private static boolean isShutdownFlag = false;
     private static Timer preCreateNextIndexTimer = new Timer();
-    private AtomicInteger closedThreadCount = new AtomicInteger();
+    private static AtomicInteger closedThreadCount = new AtomicInteger();
     private int workerThreads = 0;
     private Kafka kafka;
     private ES es;
@@ -79,6 +79,7 @@ public class Process implements SignalHandler {
         }
 
         while (closedThreadCount.get() != this.workerThreads) {
+            logger.error("closedThreadCount:{} workerThreads:{}", closedThreadCount.get(), this.workerThreads);
             try {
                 Thread.sleep(1000l);
             } catch (InterruptedException e) {
@@ -89,5 +90,9 @@ public class Process implements SignalHandler {
         if (signal.getName().equals("TERM")) {
             this.workers.shutdown();
         }
+    }
+
+    public static void addWorkerClose() {
+        closedThreadCount.addAndGet(1);
     }
 }
