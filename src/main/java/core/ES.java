@@ -242,7 +242,9 @@ public class ES {
         String indexTimeFormat = getNameByArg(doc, indexFormat, indexFormatArgs);
         Long indexNameTimestamp = indexNameFormatCHM.get(indexTimeFormat);
         if (indexNameTimestamp == null || dt.getMillis() - indexNameTimestamp > INDEX_NAME_UPDATE_TIME_INTERVAL) {
-            indexNameFormatCHM.putIfAbsent(indexTimeFormat, dt.getMillis());
+            indexNameFormatCHM.put(indexTimeFormat, dt.getMillis());
+            logger.info("getIndexName indexTimeFormat:{} dt:{} indexNameTimestamp:{} new indexNameTimestamp:{}",
+                    indexTimeFormat, dt.getMillis(), indexNameTimestamp, indexNameFormatCHM.get(indexTimeFormat));
         }
 
         String indexName = Common.getIndexNameByFmtDt(indexTimeFormat, dt);

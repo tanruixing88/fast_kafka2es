@@ -22,7 +22,13 @@ public class Parse {
         try {
             String line = new String((byte[])msg, "utf-8");
             try {
-                return (JSONObject) new JSONParser().parse(line);
+                Object obj = new JSONParser().parse(line);
+                if (obj instanceof JSONObject) {
+                    return (JSONObject)obj;
+                } else {
+                    logger.error("unsupported can not convert JSONObject string:{}", line);
+                    return null;
+                }
             } catch (ParseException e) {
                 logger.error("parse line error:{}", e);
                 return null;
